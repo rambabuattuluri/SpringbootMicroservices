@@ -1,0 +1,5 @@
+package com.springboot.microservice.ConvertCurrency;
+
+public class ConvertCurrencyBean {
+
+}

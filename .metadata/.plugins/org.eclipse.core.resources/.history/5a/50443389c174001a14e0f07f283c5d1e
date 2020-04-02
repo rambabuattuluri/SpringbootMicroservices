@@ -1,0 +1,43 @@
+package com.springboot.microservice.ConvertCurrency;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+@RestController
+public class ConvertCurrencyController {
+	
+	private static Map<Long, ConvertCurrencyBean> repo = new HashMap<>();
+	static {
+	  ConvertCurrencyBean bean = new ConvertCurrencyBean();
+	  bean.setId(1L);
+	  bean.setFromCountryCode("USD");
+	  bean.setToCountryCode("IND");
+	  bean.setConversionFactor(54.78);
+	  bean.setConvertAmount(1);
+	  bean.setConvertedAmount(54.78);
+	  repo.put(bean.getId(), bean);
+	      
+	      ConvertCurrencyBean almond = new ConvertCurrencyBean();
+	      almond.setId("2");
+	      almond.setName("Almond");
+	      productRepo.put(almond.getId(), almond);
+	   }
+	
+	@RequestMapping("/convertCurrency/from/{fromCountryCode}/amount/{convertAmount}")
+    public ResponseEntity<Object> convertCurrency(@PathVariable("fromCountryCode") String fromCountryCode, @PathVariable("convertAmount") double convertAmount) {
+        System.out.println("fromCountryCode: " + fromCountryCode);
+        System.out.println("convertAmont: " + convertAmount);
+		bean.setConversionFactor(Double.valueOf(74.34));
+		bean.setConvertedAmount(bean.getConversionFactor()*convertAmount);
+    return new ResponseEntity<>("Converted Amount: " + bean.getConvertedAmount(), HttpStatus.OK);
+    }
+
+}

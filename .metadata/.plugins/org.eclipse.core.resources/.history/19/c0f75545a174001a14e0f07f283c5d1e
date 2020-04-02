@@ -1,0 +1,13 @@
+server:
+  port: 9080
+spring:
+  application:
+    name: CurrencyConversionFactor
+  jpa:
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:conversionFactorDB
+    username: sa
