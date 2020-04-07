@@ -3,12 +3,14 @@ package com.springboot.microservice.ConvertCurrency;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @RestController
@@ -64,4 +66,33 @@ public class ConvertCurrencyController {
         return new ResponseEntity<>("Input CountryCode is not Found " , HttpStatus.FOUND);   
 	    }
 	}
+	
+	//Using Rest Template 
+	@RequestMapping("/convertCurrency/v2/from/{fromCountryCode}/amount/{convertAmount}")
+    public ConvertCurrencyBean convertCurrencyv2(@PathVariable("fromCountryCode") String fromCountryCode, @PathVariable("convertAmount") double convertAmount) {
+		Map<String, String>uriVariables=new HashMap<>();  
+		uriVariables.put("fromCountryCode", fromCountryCode);  
+		ResponseEntity<ConvertCurrencyBean>responseEntity=new RestTemplate().getForEntity("http://localhost:9000/getConversionFactor/fromCountryCode/{fromCountryCode}", ConvertCurrencyBean.class, uriVariables);  
+		ConvertCurrencyBean response=responseEntity.getBody();	
+		return new ConvertCurrencyBean(response.getId(), response.getFromCountryCode(),response.getToCountryCode(),response.getConversionFactor(),convertAmount,convertAmount*(response.getConversionFactor()));
+	}
+
+	//Using Feign Client 
+	@Autowired 
+	CurrencyConversionFactorProxy proxy;
+	@RequestMapping("/convertCurrency/v3/from/{fromCountryCode}/amount/{convertAmount}")
+    public ConvertCurrencyBean convertCurrencyFeign(@PathVariable("fromCountryCode") String fromCountryCode, @PathVariable("convertAmount") double convertAmount) {
+		ConvertCurrencyBean response=proxy.retrieveConversionFactor(fromCountryCode);	
+		return new ConvertCurrencyBean(response.getId(), response.getFromCountryCode(),response.getToCountryCode(),response.getConversionFactor(),convertAmount,convertAmount*(response.getConversionFactor()));
+	}
+
+	//Using Hytrix Circuit Breaker & Hytrix Dashboard  
+	@Autowired 
+	ConvertCurrencyService service;
+	@RequestMapping("/convertCurrency/v4/from/{fromCountryCode}/amount/{convertAmount}")
+    public ConvertCurrencyBean convertCurrencyHytrix(@PathVariable("fromCountryCode") String fromCountryCode, @PathVariable("convertAmount") double convertAmount) {
+		ConvertCurrencyBean response=service.retrieveConversionFactor(fromCountryCode);	
+		return new ConvertCurrencyBean(response.getId(), response.getFromCountryCode(),response.getToCountryCode(),convertAmount,response.getConversionFactor(),convertAmount*(response.getConversionFactor()));
+	}
+	
 }

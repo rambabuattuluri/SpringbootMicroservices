@@ -3,3 +3,12 @@ server:
 spring:
   application:
     name: ConvertCurrency
+
+#CurrencyConversionFactor:
+#  ribbon:
+#    listOfServers: http://localhost:9000, http://localhost:9001 
+
+eureka:
+   client:
+     server-url:
+       default-zone: http://localhost:8761/eureka  

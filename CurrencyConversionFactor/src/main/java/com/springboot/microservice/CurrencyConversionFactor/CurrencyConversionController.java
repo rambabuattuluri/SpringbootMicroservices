@@ -45,8 +45,8 @@ public class CurrencyConversionController {
 	}
 		
 	@RequestMapping(path = "/getConversionFactor/fromCountryCode/{fromCountryCode}")
-    public String findConversionFactorByFromCountryCode(@PathVariable("fromCountryCode") String fromCountryCode) {  
-        return "Conversion Factor: " + conversionFactorService.getConversionFactorByFromCountryCode(fromCountryCode).getConversionFactor();
+    public ConversionFactorBean findConversionFactorByFromCountryCode(@PathVariable("fromCountryCode") String fromCountryCode) {  
+        return conversionFactorService.getConversionFactorByFromCountryCode(fromCountryCode);
     }
 	
 	@RequestMapping(path = "/getConversionFactor/id/{Id}")
