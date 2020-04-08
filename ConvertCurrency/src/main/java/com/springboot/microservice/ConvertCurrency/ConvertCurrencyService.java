@@ -1,7 +1,5 @@
 package com.springboot.microservice.ConvertCurrency;
 
-import java.util.Date;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +27,7 @@ public class ConvertCurrencyService {
 	public ConvertCurrencyBean CurrencyConversionFactorFallback(String fromCountryCode) {
 		System.out.println("CurrencyConversionFactor Service is down!!! fallback route enabled..."); 
        // return "CIRCUIT BREAKER ENABLED!!! No Response From CurrencyConversionFactor Service at this moment. " + " Service will be back shortly - " + new Date();
-	    return new ConvertCurrencyBean(0L,"CurrencyConversionFactor Service is Down","None", 0.0, 0.0, 0.0);
+	    return new ConvertCurrencyBean(0L,"None","None", 0.0, 0.0, 0.0);
 	}
 	
     @Bean

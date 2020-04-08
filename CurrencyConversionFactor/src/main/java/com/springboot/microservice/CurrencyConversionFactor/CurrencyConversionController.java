@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @SpringBootApplication
 @RestController
+//@RequestMapping(value="/ConversionFactor")
 public class CurrencyConversionController {
 	
 	@Autowired
@@ -20,7 +21,7 @@ public class CurrencyConversionController {
 	@Autowired
 	private ConversionFactorJpaRepository repo2;
 	
-	@RequestMapping(path = "/addConversionFactor/{fromCountryCode}", method=RequestMethod.POST)
+	@RequestMapping(value = "/addConversionFactor/{fromCountryCode}", method=RequestMethod.POST)
     public ResponseEntity<Object> addNewConversionFactor(@PathVariable("fromCountryCode") String fromCountryCode, @RequestBody ConversionFactorBean value) {
 		if(!repo2.existsByFromCountryCode(fromCountryCode)){
 		    conversionFactorService.addConversionFactor(value);
@@ -31,32 +32,36 @@ public class CurrencyConversionController {
 		 }
     }
 	
-	@RequestMapping(path = "/updateConversionFactor/{fromCountryCode}", method=RequestMethod.PUT)
+	@RequestMapping(value = "/updateConversionFactor/{fromCountryCode}", method=RequestMethod.PUT)
     public ResponseEntity<Object> updateExistingConversionFactor(@PathVariable("fromCountryCode") String fromCountryCode, @RequestBody ConversionFactorBean value) {
 		if(!repo2.existsByFromCountryCode(fromCountryCode)) throw new CountryNotFoundException();
 		conversionFactorService.updateConversionFactor(value);
         return new ResponseEntity<>("Conversion Factor is updated successfully", HttpStatus.OK);
     }
 
-	@RequestMapping(path = "/getAllConversionFactors/")
+	@RequestMapping(value = "/getAllConversionFactors/", method=RequestMethod.GET)
 	public List<ConversionFactorBean> getAllConversionFactors()
 	{
 		return conversionFactorService.getAll();
 	}
 		
-	@RequestMapping(path = "/getConversionFactor/fromCountryCode/{fromCountryCode}")
+	@RequestMapping(value = "/getConversionFactor/fromCountryCode/{fromCountryCode}", method=RequestMethod.GET)
     public ConversionFactorBean findConversionFactorByFromCountryCode(@PathVariable("fromCountryCode") String fromCountryCode) {  
         return conversionFactorService.getConversionFactorByFromCountryCode(fromCountryCode);
     }
 	
-	@RequestMapping(path = "/getConversionFactor/id/{Id}")
-    public double findConversionFactorById(@PathVariable("Id") Long id) {  
-        return conversionFactorService.getConversionFactorById(id).getConversionFactor();
+	@RequestMapping(value = "/getConversionFactor/id/{Id}", method=RequestMethod.DELETE)
+    public void deleteConversionFactorById(@PathVariable("Id") Long id) {  
+        conversionFactorService.delete(id);
     }
 	/*
 	 * @RequestMapping(path = "/getConversionFactor/id/{Id}") 
 	 * public ConversionFactorValue findConversionFactorById(@PathVariable("Id") Long id) {
 	 * return conversionFactorService.getConversionFactorById(id); }
 	 */
+	@RequestMapping(value = "/getConversionFactor/id/{Id}", method=RequestMethod.GET)
+    public double findConversionFactorById(@PathVariable("Id") Long id) {  
+        return conversionFactorService.getConversionFactorById(id).getConversionFactor();
+    }
 
 }

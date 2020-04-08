@@ -9,11 +9,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import io.swagger.annotations.ApiOperation;
+
 @SpringBootApplication
 @RestController
+@RequestMapping(value="/ConvertCurrency")
 public class ConvertCurrencyController {
 	
 	private static Map<String, ConvertCurrencyBean> repo = new HashMap<>();
@@ -53,7 +57,9 @@ public class ConvertCurrencyController {
 	  
 	   }
 	
-	@RequestMapping("/convertCurrency/from/{fromCountryCode}/amount/{convertAmount}")
+	@ApiOperation(value = "Get Converted Amount", response = Iterable.class)
+	
+	@RequestMapping(value="/convertCurrency/from/{fromCountryCode}/amount/{convertAmount}",method=RequestMethod.GET)
     public ResponseEntity<Object> convertCurrency(@PathVariable("fromCountryCode") String fromCountryCode, @PathVariable("convertAmount") double convertAmount) {
         System.out.println("fromCountryCode: " + fromCountryCode);
         System.out.println("convertAmont: " + convertAmount);
@@ -68,7 +74,8 @@ public class ConvertCurrencyController {
 	}
 	
 	//Using Rest Template 
-	@RequestMapping("/convertCurrency/v2/from/{fromCountryCode}/amount/{convertAmount}")
+	@ApiOperation(value = "Get Converted Amount using Rest Template", response = Iterable.class)
+	@RequestMapping(value="/convertCurrency/v2/from/{fromCountryCode}/amount/{convertAmount}", method=RequestMethod.GET)
     public ConvertCurrencyBean convertCurrencyv2(@PathVariable("fromCountryCode") String fromCountryCode, @PathVariable("convertAmount") double convertAmount) {
 		Map<String, String>uriVariables=new HashMap<>();  
 		uriVariables.put("fromCountryCode", fromCountryCode);  
@@ -80,7 +87,7 @@ public class ConvertCurrencyController {
 	//Using Feign Client 
 	@Autowired 
 	CurrencyConversionFactorProxy proxy;
-	@RequestMapping("/convertCurrency/v3/from/{fromCountryCode}/amount/{convertAmount}")
+	@RequestMapping(value="/convertCurrency/v3/from/{fromCountryCode}/amount/{convertAmount}", method=RequestMethod.GET)
     public ConvertCurrencyBean convertCurrencyFeign(@PathVariable("fromCountryCode") String fromCountryCode, @PathVariable("convertAmount") double convertAmount) {
 		ConvertCurrencyBean response=proxy.retrieveConversionFactor(fromCountryCode);	
 		return new ConvertCurrencyBean(response.getId(), response.getFromCountryCode(),response.getToCountryCode(),response.getConversionFactor(),convertAmount,convertAmount*(response.getConversionFactor()));
@@ -89,10 +96,10 @@ public class ConvertCurrencyController {
 	//Using Hytrix Circuit Breaker & Hytrix Dashboard  
 	@Autowired 
 	ConvertCurrencyService service;
-	@RequestMapping("/convertCurrency/v4/from/{fromCountryCode}/amount/{convertAmount}")
+	@RequestMapping(value="/convertCurrency/v4/from/{fromCountryCode}/amount/{convertAmount}", method=RequestMethod.GET)
     public ConvertCurrencyBean convertCurrencyHytrix(@PathVariable("fromCountryCode") String fromCountryCode, @PathVariable("convertAmount") double convertAmount) {
 		ConvertCurrencyBean response=service.retrieveConversionFactor(fromCountryCode);	
-		return new ConvertCurrencyBean(response.getId(), response.getFromCountryCode(),response.getToCountryCode(),convertAmount,response.getConversionFactor(),convertAmount*(response.getConversionFactor()));
+		return new ConvertCurrencyBean(response.getId(), fromCountryCode,response.getToCountryCode(),convertAmount,response.getConversionFactor(),convertAmount*(response.getConversionFactor()));
 	}
 	
 }

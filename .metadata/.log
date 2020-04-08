@@ -9416,3 +9416,517 @@ java.util.concurrent.TimeoutException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:661)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1476)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 00:11:23.937
+!MESSAGE Preparing classpath changed notification CurrencyConversionFactor
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 00:11:23.946
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 00:11:23.961
+!MESSAGE classpath=208 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 00:11:23.967
+!MESSAGE executing callback sts4.classpath.rkgJzYVu CurrencyConversionFactor false 208
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 00:11:24.005
+!MESSAGE executing callback sts4.classpath.rkgJzYVu SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 00:11:36.304
+!MESSAGE Preparing classpath changed notification CurrencyConversionFactor
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 00:11:36.311
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 00:11:36.323
+!MESSAGE classpath=208 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 00:11:36.330
+!MESSAGE executing callback sts4.classpath.rkgJzYVu CurrencyConversionFactor false 208
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 00:11:36.445
+!MESSAGE executing callback sts4.classpath.rkgJzYVu SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-04-09 00:21:48.353
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.eclipse.lsp4e.operations.declaration.OpenDeclarationHyperlinkDetector.detectHyperlinks(OpenDeclarationHyperlinkDetector.java:79)
+	at org.eclipse.ui.texteditor.HyperlinkDetectorRegistry$HyperlinkDetectorDelegate.detectHyperlinks(HyperlinkDetectorRegistry.java:81)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:289)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:262)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.mouseMove(HyperlinkManager.java:457)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:216)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3944)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3547)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:566)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:661)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1476)
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-04-09 00:21:48.887
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.eclipse.lsp4e.operations.declaration.OpenDeclarationHyperlinkDetector.detectHyperlinks(OpenDeclarationHyperlinkDetector.java:79)
+	at org.eclipse.ui.texteditor.HyperlinkDetectorRegistry$HyperlinkDetectorDelegate.detectHyperlinks(HyperlinkDetectorRegistry.java:81)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:289)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:262)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.mouseMove(HyperlinkManager.java:457)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:216)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3944)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3547)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:566)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:661)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1476)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 00:49:13.077
+!MESSAGE Preparing classpath changed notification ConvertCurrency
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 00:49:13.090
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 00:49:13.113
+!MESSAGE classpath=208 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 00:49:13.127
+!MESSAGE executing callback sts4.classpath.rkgJzYVu ConvertCurrency false 208
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 00:49:13.206
+!MESSAGE executing callback sts4.classpath.rkgJzYVu SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-04-09 01:13:40.205
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.eclipse.lsp4e.operations.declaration.OpenDeclarationHyperlinkDetector.detectHyperlinks(OpenDeclarationHyperlinkDetector.java:79)
+	at org.eclipse.ui.texteditor.HyperlinkDetectorRegistry$HyperlinkDetectorDelegate.detectHyperlinks(HyperlinkDetectorRegistry.java:81)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:289)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:262)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.mouseMove(HyperlinkManager.java:457)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:216)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3944)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3547)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:566)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:661)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1476)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:35.277
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.rkgJzYVu
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:35.287
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.rkgJzYVu
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:35.294
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:35.304
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.rkgJzYVu => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.476
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.WKybJSjy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.484
+!MESSAGE subscribing to classpath changes: sts4.classpath.WKybJSjy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.491
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.498
+!MESSAGE subsribers = [sts4.classpath.WKybJSjy]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.505
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.511
+!MESSAGE project CurrencyConversionFactor ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.522
+!MESSAGE project ConvertCurrency ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.530
+!MESSAGE Preparing classpath changed notification CurrencyConversionFactor
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.536
+!MESSAGE project NetflixEurekaNamingServer ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.542
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.547
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.553
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.WKybJSjy => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.561
+!MESSAGE classpath=208 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.568
+!MESSAGE executing callback sts4.classpath.WKybJSjy CurrencyConversionFactor false 208
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.659
+!MESSAGE executing callback sts4.classpath.WKybJSjy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.699
+!MESSAGE Preparing classpath changed notification NetflixEurekaNamingServer
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.706
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.749
+!MESSAGE classpath=186 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.772
+!MESSAGE executing callback sts4.classpath.WKybJSjy NetflixEurekaNamingServer false 186
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.934
+!MESSAGE executing callback sts4.classpath.WKybJSjy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.947
+!MESSAGE Preparing classpath changed notification ConvertCurrency
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.954
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.969
+!MESSAGE classpath=208 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:56.979
+!MESSAGE executing callback sts4.classpath.WKybJSjy ConvertCurrency false 208
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:15:57.063
+!MESSAGE executing callback sts4.classpath.WKybJSjy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:10.678
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WKybJSjy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:10.689
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.WKybJSjy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:10.696
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:10.703
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WKybJSjy => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:17.708
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.nFAPOcqz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:17.714
+!MESSAGE subscribing to classpath changes: sts4.classpath.nFAPOcqz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:17.720
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:17.728
+!MESSAGE subsribers = [sts4.classpath.nFAPOcqz]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:17.735
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:17.745
+!MESSAGE project CurrencyConversionFactor ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:17.755
+!MESSAGE project ConvertCurrency ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:17.766
+!MESSAGE Preparing classpath changed notification CurrencyConversionFactor
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:17.773
+!MESSAGE project NetflixEurekaNamingServer ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:17.779
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:17.786
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:17.799
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.nFAPOcqz => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:17.805
+!MESSAGE classpath=208 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:17.811
+!MESSAGE executing callback sts4.classpath.nFAPOcqz CurrencyConversionFactor false 208
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:17.922
+!MESSAGE executing callback sts4.classpath.nFAPOcqz SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:17.948
+!MESSAGE Preparing classpath changed notification NetflixEurekaNamingServer
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:17.965
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-04-09 01:16:17.972
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.eclipse.lsp4e.operations.hover.LSBasedHover.getHoverInfo(LSBasedHover.java:108)
+	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo2(SpringBootJavaHoverProvider.java:43)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:167)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:18.031
+!MESSAGE classpath=186 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:18.050
+!MESSAGE executing callback sts4.classpath.nFAPOcqz NetflixEurekaNamingServer false 186
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:19.307
+!MESSAGE executing callback sts4.classpath.nFAPOcqz SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:19.315
+!MESSAGE Preparing classpath changed notification ConvertCurrency
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:19.322
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:19.339
+!MESSAGE classpath=208 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:19.345
+!MESSAGE executing callback sts4.classpath.nFAPOcqz ConvertCurrency false 208
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:16:19.402
+!MESSAGE executing callback sts4.classpath.nFAPOcqz SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-04-09 01:16:41.404
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.eclipse.lsp4e.operations.hover.LSBasedHover.getHoverInfo(LSBasedHover.java:108)
+	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo2(SpringBootJavaHoverProvider.java:43)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:167)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:15.503
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.nFAPOcqz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:15.516
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.nFAPOcqz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:15.523
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:15.529
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.nFAPOcqz => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.178
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.VoJuthea
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.186
+!MESSAGE subscribing to classpath changes: sts4.classpath.VoJuthea
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.192
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.199
+!MESSAGE subsribers = [sts4.classpath.VoJuthea]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.205
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.211
+!MESSAGE project ConvertCurrency ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.217
+!MESSAGE project CurrencyConversionFactor ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.227
+!MESSAGE Preparing classpath changed notification ConvertCurrency
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.238
+!MESSAGE project NetflixEurekaNamingServer ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.245
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.251
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.256
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.VoJuthea => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.262
+!MESSAGE classpath=208 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.268
+!MESSAGE executing callback sts4.classpath.VoJuthea ConvertCurrency false 208
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.383
+!MESSAGE executing callback sts4.classpath.VoJuthea SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.452
+!MESSAGE Preparing classpath changed notification NetflixEurekaNamingServer
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.462
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.479
+!MESSAGE classpath=186 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.493
+!MESSAGE executing callback sts4.classpath.VoJuthea NetflixEurekaNamingServer false 186
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.568
+!MESSAGE executing callback sts4.classpath.VoJuthea SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.576
+!MESSAGE Preparing classpath changed notification CurrencyConversionFactor
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.584
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.626
+!MESSAGE classpath=208 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.637
+!MESSAGE executing callback sts4.classpath.VoJuthea CurrencyConversionFactor false 208
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-04-09 01:17:24.697
+!MESSAGE executing callback sts4.classpath.VoJuthea SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-04-09 01:17:45.457
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.eclipse.lsp4e.operations.hover.LSBasedHover.getHoverInfo(LSBasedHover.java:108)
+	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo2(SpringBootJavaHoverProvider.java:43)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:167)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-04-09 01:46:24.660
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.eclipse.lsp4e.operations.hover.LSBasedHover.getHoverInfo(LSBasedHover.java:108)
+	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo2(SpringBootJavaHoverProvider.java:43)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:167)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-04-09 01:47:17.700
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.eclipse.lsp4e.operations.hover.LSBasedHover.getHoverInfo(LSBasedHover.java:108)
+	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo2(SpringBootJavaHoverProvider.java:43)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:167)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-04-09 01:48:29.458
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.eclipse.lsp4e.operations.hover.LSBasedHover.getHoverInfo(LSBasedHover.java:108)
+	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo2(SpringBootJavaHoverProvider.java:43)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:167)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-04-09 01:48:55.370
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.eclipse.lsp4e.operations.hover.LSBasedHover.getHoverInfo(LSBasedHover.java:108)
+	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo2(SpringBootJavaHoverProvider.java:43)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:167)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
