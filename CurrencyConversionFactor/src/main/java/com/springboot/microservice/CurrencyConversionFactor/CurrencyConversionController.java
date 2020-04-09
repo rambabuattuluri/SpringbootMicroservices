@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @SpringBootApplication
 @RestController
-//@RequestMapping(value="/ConversionFactor")
+@RequestMapping(value="/MS1")
 public class CurrencyConversionController {
 	
 	@Autowired
@@ -45,12 +45,12 @@ public class CurrencyConversionController {
 		return conversionFactorService.getAll();
 	}
 		
-	@RequestMapping(value = "/getConversionFactor/fromCountryCode/{fromCountryCode}", method=RequestMethod.GET)
+	@RequestMapping(value = "/getConversionFactor/{fromCountryCode}", method=RequestMethod.GET)
     public ConversionFactorBean findConversionFactorByFromCountryCode(@PathVariable("fromCountryCode") String fromCountryCode) {  
         return conversionFactorService.getConversionFactorByFromCountryCode(fromCountryCode);
     }
 	
-	@RequestMapping(value = "/getConversionFactor/id/{Id}", method=RequestMethod.DELETE)
+	@RequestMapping(value = "/deleteConversionFactor/{Id}", method=RequestMethod.DELETE)
     public void deleteConversionFactorById(@PathVariable("Id") Long id) {  
         conversionFactorService.delete(id);
     }

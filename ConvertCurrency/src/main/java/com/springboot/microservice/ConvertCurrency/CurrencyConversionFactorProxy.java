@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RibbonClient("CurrencyConversionFactor")
 public interface CurrencyConversionFactorProxy {
 
-	@RequestMapping("/getConversionFactor/fromCountryCode/{fromCountryCode}")
+	@RequestMapping("/MS1/getConversionFactor/{fromCountryCode}")
 	  public ConvertCurrencyBean retrieveConversionFactor
 	    (@PathVariable("fromCountryCode") String fromCountryCode);
 }

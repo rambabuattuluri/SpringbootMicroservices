@@ -19,7 +19,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.springboot.microservice.ConvertCurrency"))
-                .paths(regex("/ConvertCurrency.*"))
+                .paths(regex("/MS2.*"))
                 .build()
                 .apiInfo(metaData());
     }
