@@ -1,5 +1,5 @@
 server:
-  port: 9000
+  port: 9080
 spring:
   application:
     name: CurrencyConversionFactor
@@ -13,6 +13,12 @@ spring:
     username: sa
     
 eureka:
-   client:
-     server-url:
-       default-zone: http://localhost:8761/eureka
+     instance:
+       prefer-ip-address: true
+     client:
+       proxy-host: localhost
+       register-with-eureka: true
+       fetch-registry: true
+       service-url:
+          default-zone: http://localhost:8761/eureka
+          

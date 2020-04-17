@@ -1,6 +1,7 @@
 package com.springboot.microservice.CurrencyConversionFactor;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
@@ -47,6 +48,7 @@ public class CurrencyConversionController {
 		
 	@RequestMapping(value = "/getConversionFactor/{fromCountryCode}", method=RequestMethod.GET)
     public ConversionFactorBean findConversionFactorByFromCountryCode(@PathVariable("fromCountryCode") String fromCountryCode) {  
+		if(!repo2.existsByFromCountryCode(fromCountryCode)) throw new CountryNotFoundException();
         return conversionFactorService.getConversionFactorByFromCountryCode(fromCountryCode);
     }
 	
@@ -54,11 +56,7 @@ public class CurrencyConversionController {
     public void deleteConversionFactorById(@PathVariable("Id") Long id) {  
         conversionFactorService.delete(id);
     }
-	/*
-	 * @RequestMapping(path = "/getConversionFactor/id/{Id}") 
-	 * public ConversionFactorValue findConversionFactorById(@PathVariable("Id") Long id) {
-	 * return conversionFactorService.getConversionFactorById(id); }
-	 */
+
 	@RequestMapping(value = "/getConversionFactor/id/{Id}", method=RequestMethod.GET)
     public double findConversionFactorById(@PathVariable("Id") Long id) {  
         return conversionFactorService.getConversionFactorById(id).getConversionFactor();
