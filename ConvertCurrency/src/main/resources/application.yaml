@@ -9,7 +9,7 @@ spring:
       probability: 1.0  
   zipkin:
     enabled: true
-    base-url: http://192.168.99.100:9411/
+    base-url: http://34.71.225.108:9411/
 #CurrencyConversionFactor:
 #  ribbon:
 #    listOfServers: http://localhost:9000, http://localhost:9001 
@@ -18,4 +18,4 @@ eureka:
        register-with-eureka: true
        fetch-registry: true
        service-url:
-          defaultZone: http://192.168.99.100:8761/eureka 
+          defaultZone: http://104.155.182.25:8761/eureka/

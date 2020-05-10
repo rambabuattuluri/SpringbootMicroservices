@@ -19,7 +19,7 @@ public class ConvertCurrencyService {
 	
 	@HystrixCommand(commandKey = "CurrencyConversionFactor", fallbackMethod = "CurrencyConversionFactorFallback")
 	public ConvertCurrencyBean retrieveConversionFactor(String fromCountryCode) {
-		ResponseEntity<ConvertCurrencyBean>responseEntity=template.getForEntity("http://192.168.99.100:9080/MS1/getConversionFactor/{fromCountryCode}", ConvertCurrencyBean.class, fromCountryCode);  
+		ResponseEntity<ConvertCurrencyBean>responseEntity=template.getForEntity("http://104.197.76.172:9080/MS1/getConversionFactor/{fromCountryCode}", ConvertCurrencyBean.class, fromCountryCode);  
 		ConvertCurrencyBean response=responseEntity.getBody();	
 		return new ConvertCurrencyBean(response.getId(), response.getFromCountryCode(),response.getToCountryCode(),response.getConvertAmount(),response.getConversionFactor(),response.getConvertedAmount());
 	}
