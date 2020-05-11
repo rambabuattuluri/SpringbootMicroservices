@@ -91,7 +91,7 @@ public class ConvertCurrencyController {
     public ConvertCurrencyBean convertCurrencyRestTemplate(@PathVariable("fromCountryCode") String fromCountryCode, @PathVariable("convertAmount") double convertAmount) {
 		Map<String, String>uriVariables=new HashMap<>();  
 		uriVariables.put("fromCountryCode", fromCountryCode);  
-		ResponseEntity<ConvertCurrencyBean>responseEntity=restTemplate.getForEntity("http://104.197.76.172:9080/MS1/getConversionFactor/{fromCountryCode}", ConvertCurrencyBean.class, uriVariables);  
+		ResponseEntity<ConvertCurrencyBean>responseEntity=restTemplate.getForEntity("http://localhost:9080/MS1/getConversionFactor/{fromCountryCode}", ConvertCurrencyBean.class, uriVariables);  
 		ConvertCurrencyBean response=responseEntity.getBody();	
 		logger.info("{}", response); 
 		return new ConvertCurrencyBean(response.getId(), response.getFromCountryCode(),response.getToCountryCode(),convertAmount,response.getConversionFactor(),convertAmount*(response.getConversionFactor()));
