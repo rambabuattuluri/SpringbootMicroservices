@@ -1,5 +1,7 @@
 package com.bootcamp.microservice.cartservice.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,6 +13,10 @@ public class ProductService {
 	
 	@Autowired
 	private ProductJpaRepository productRepository;
+	
+	public List<Product> getProducts(){
+		return productRepository.findAll();
+	}
 	
     public void addProduct(Product product, String authToken) {
     	productRepository.save(toProduct(product,authToken));
